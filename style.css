@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --ff-highline:  'Staatliches', sans-serif;
+    --ff-body: 'Palanquin', sans-serif;
+    --background-header-color: hsl(218, 17%, 62%);
+    --background-headind-color: hsl(275, 18%, 79%);
+    --background-main-color: hsl(233, 100%, 97%);
+    --background-span-color: #FEEAFA;
+    --background-color-span-hover: #ffb8f1;
+    --h1-color: #FFF;
+    --span-color: #4A4E69;
+    --p-color: #23053A;
+
+    font-size: 62,5%;
+}
+
+body{
+    font-family: var(--ff-body);
+}
+
+h1, span {
+    font-family: var(--ff-highline);
+}
+
+header {
+    background-color: var(--background-header-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header  img {
+    width: 14rem;
+    filter: drop-shadow(0px 6px 6px rgba(0, 0, 0, 0.25));
+    margin: 3.2rem auto;
+    animation-name: topDown;
+    animation-delay: 200ms;
+    animation-duration: 700ms;
+}
+
+
+h1 {
+    font-size: 4rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    color: var(--h1-color);
+    text-align: center;
+    background-color: var(--background-headind-color);
+    display: block;
+    width: 100vw;
+    padding: 0.8rem 0;
+    margin-bottom: 3rem;
+}
+
+
+main {
+
+    background: var(--background-main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+main p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--p-color);
+    max-width: 31rem;
+    text-align: center;
+    margin: 1.4rem auto;
+}
+
+#container {
+    margin: 6.3rem auto;
+    max-width: 32rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards {
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 3.2rem;
+}
+
+.card {
+    width: 32rem;
+    position: relative;
+    display: block;
+}
+
+.card:hover {
+    cursor: pointer;
+    transform: scale(1.1) ;
+    transition-duration: 700ms;
+}
+
+.card:hover img {
+    filter: blur(2px) saturate(50%);
+}
+
+.card:hover span{
+    background-color: var(--background-color-span-hover);
+}
+
+
+.card img {
+    width: 100%;
+    border-radius: 2rem;
+    animation-name: downTop;
+    animation-delay: 200ms;
+    animation-duration: 700ms;
+}
+
+.card span{
+display: block;
+position: absolute;
+right: 1.6rem;
+top: 1.6rem;
+color: var(--span-color);
+font-size: 2rem;
+line-height: 3.4rem;
+padding: 0 2.5rem;
+z-index: 1;
+background-color: var(--background-span-color);
+border-radius: 2rem;
+animation-name: topDown;
+animation-delay: 200ms;
+animation-duration: 700ms;
+}
+
+
+/* KEYFRAMES DAS ANIMAÇÕES */
+
+@keyframes topDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-15px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+@keyframes downTop {
+        0% {
+            opacity: 0;
+            transform: translateY(+15px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+
+/* DAQUI PRA BAIXO SÃO AS OPÇÕES DE RESPONSIVIDADES */
+
