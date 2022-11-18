@@ -68,7 +68,7 @@ h1 {
 }
 
 .main-paragraph p {
-    font-size: 2rem;
+    font-size: 1.6rem;
     line-height: 2rem;
     color: var(--p-color);
     max-width: 31rem;
@@ -186,7 +186,7 @@ footer {
     }
 
     .main-paragraph p {
-        font-size: 2rem;
+        font-size: 1.6rem;
         line-height: 2rem;
         color: var(--p-color);
         max-width: 58rem;
